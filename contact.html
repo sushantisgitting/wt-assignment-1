@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Cream Pie Factory</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .form-control {
+        margin-bottom: 15px;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ced4da;
+      }
+      .btn-custom {
+        background-color: #ff6b6b;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 8px;
+        border: none;
+        transition: background 0.3s;
+      }
+      .btn-custom:hover {
+        background-color: #e63946;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Cream Pie Factory.</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="container mt-5">
+      <h2 class="text-center">Contact Us</h2>
+      <form class="needs-validation" novalidate>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Name" required />
+          <div class="invalid-feedback">Please enter your name.</div>
+        </div>
+        <div class="mb-3">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Email"
+            required
+          />
+          <div class="invalid-feedback">Please enter a valid email.</div>
+        </div>
+        <div class="mb-3">
+          <input
+            type="tel"
+            class="form-control"
+            placeholder="Phone Number"
+            required
+          />
+          <div class="invalid-feedback">Please enter your phone number.</div>
+        </div>
+        <div class="mb-3">
+          <textarea
+            class="form-control"
+            placeholder="Message"
+            rows="4"
+            required
+          ></textarea>
+          <div class="invalid-feedback">Please enter a message.</div>
+        </div>
+        <button type="submit" class="btn btn-custom w-100">Send Message</button>
+      </form>
+    </section>
+
+    <script>
+      (function () {
+        "use strict";
+        var forms = document.querySelectorAll(".needs-validation");
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
